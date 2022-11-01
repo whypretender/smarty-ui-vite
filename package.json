@@ -2,7 +2,7 @@
   "name": "vue3-vite-ui",
   "version": "1.0.0",
   "description": "vue3 vite ui test",
-  "main": "index.js",
+  "main": "dist/smarty-ui.umd.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
