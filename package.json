@@ -1,7 +1,7 @@
 {
-  "name": "smarty-ui-vite",
+  "name": "vue3-vite-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "vue3 vite ui test",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
@@ -16,7 +16,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "vite": "^3.1.8",
     "vitepress-demoblock": "^1.0.3",
@@ -42,5 +42,9 @@
     "unocss": "0.45.6",
     "vitepress": "0.22.4",
     "vitepress-theme-demoblock": "^1.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/whypretender/smarty-ui-vite.git"
   }
 }
