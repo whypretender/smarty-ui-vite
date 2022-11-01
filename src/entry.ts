@@ -11,5 +11,5 @@ export default {
     app.component(SButton.name, SButton);
     app.component(SFCButton.name, SFCButton);
     app.component(JSXButton.name, JSXButton);
-  },
+  }
 };
