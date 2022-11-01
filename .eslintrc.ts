@@ -21,7 +21,8 @@ module.exports = {
   ],
   plugins: ["@typescript-eslint"],
   parserOptions: {
-    parser: "@typescript-eslint/parser" // 解析 .ts 文件
+    parser: "@typescript-eslint/parser", // 解析 .ts 文件
+    sourceType: "module"
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
