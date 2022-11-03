@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, InlineConfig, UserConfig } from "vite";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vue from "@vitejs/plugin-vue";
 import Unocss from "./config/unocss";
@@ -11,7 +11,7 @@ const rollupOptions = {
     }
   }
 };
-export default defineConfig({
+export const config = {
   plugins: [
     vue(),
     // 添加jsx插件
@@ -29,10 +29,12 @@ export default defineConfig({
     // target: "es2015",
     lib: {
       entry: "./src/entry.ts",
-      name: "SmartyUI",
-      fileName: "smarty-ui",
+      name: "vue3ViteUi",
+      fileName: "vue3-vite-ui",
       // 导出模块格式
       formats: ["esm", "umd", "iife", "cjs"]
-    }
+    },
+    outDir: "./dist"
   }
-});
+};
+export default defineConfig(config as UserConfig);

@@ -4,7 +4,8 @@
     "declarationDir": "./dist/types", // '.d.ts'文件的输出目录
     "jsx": "preserve",
     "lib": ["ES2015", "ESNext"],
-    "types": ["node"]
+    "types": ["node"],
+    "esModuleInterop": true
   },
   "include": [
     "./**/*.*",

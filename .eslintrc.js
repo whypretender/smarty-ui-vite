@@ -22,7 +22,13 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   parserOptions: {
     parser: "@typescript-eslint/parser", // 解析 .ts 文件
+    ecmaVersion: 2020,
     sourceType: "module"
+    // ecmaFeatures: {
+    //   globalReturn: false,
+    //   impliedStrict: false,
+    //   jsx: true
+    // }
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
