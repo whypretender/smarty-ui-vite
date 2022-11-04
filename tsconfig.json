@@ -8,10 +8,16 @@
     "esModuleInterop": true
   },
   "include": [
-    "./**/*.*",
-    "src/shims-vue.d.t",
-    "docs/.vitepress/theme/shims-vue.d.ts"
+    // "./**/*.*",
+    // "src/shims-vue.d.t",
+    "docs/.vitepress/theme/shims-vue.d.ts",
+    // "src/global.d.ts"
+    "src/**/*.*"
   ],
+  "paths": {
+    "@/*": ["src/*"]
+  },
+
   "exclude": ["node_modules"],
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": "true"

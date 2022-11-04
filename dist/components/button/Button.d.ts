@@ -1,5 +1,4 @@
 import { PropType } from "vue";
-import "uno.css";
 export declare type ISize = "small" | "medium" | "large";
 export declare type IColor = "black" | "gray" | "red" | "yellow" | "green" | "blue" | "indigo" | "purple" | "pink";
 export declare const props: {
@@ -67,10 +66,10 @@ declare const _default: import("vue").DefineComponent<{
         readonly default: "";
     };
 }>>, {
+    readonly size: ISize;
     readonly color: IColor;
     readonly round: boolean;
-    readonly size: ISize;
-    readonly icon: string;
     readonly plain: boolean;
+    readonly icon: string;
 }>;
 export default _default;

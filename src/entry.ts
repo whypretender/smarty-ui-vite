@@ -1,5 +1,5 @@
 import { App } from "vue";
-import { SButton } from "./button";
+import { SButton } from "./components/button";
 import SFCButton from "./SFCButton.vue";
 import JSXButton from "./JSXButton";
 import "uno.css";
@@ -15,6 +15,7 @@ Object.keys(components).forEach((key) => {
 
 // 导出单独组件
 export { SButton, SFCButton, JSXButton };
+// export * from "./button";
 // 全局导出 ，编写一个插件，实现一个install方法
 export default {
   install(app: App): void {

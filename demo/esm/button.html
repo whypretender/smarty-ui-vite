@@ -13,12 +13,13 @@
     <div id="app"></div>
     <script type="module">
       const { createApp } = Vue;
-      // import SButton from "../../dist/button/index.esm.js";
+      // import { SButton } from "../../dist/button/index.esm.js";
       // import "../../dist/button/assets/index.2f052dcc.css";
       import { SButton } from "../../dist/vue3-vite-ui.esm.js";
+
       import "../../dist/assets/entry.2f052dcc.css";
       console.log("vue", Vue);
-      console.log("SmartyUI", SButton);
+      console.log("SButton", SButton);
 
       createApp({
         template: `

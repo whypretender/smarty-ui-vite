@@ -66,6 +66,9 @@ const SButton = defineComponent({
     }, null) : "", slots.default ? slots.default() : ""]);
   }
 });
+SButton.install = function(app) {
+  app.component(SButton.name, SButton);
+};
 const _sfc_main = {};
 const JSXButton = defineComponent({
   name: "JSXButton",

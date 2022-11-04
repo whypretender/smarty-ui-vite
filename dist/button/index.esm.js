@@ -66,13 +66,11 @@ const SButton = defineComponent({
     }, null) : "", slots.default ? slots.default() : ""]);
   }
 });
-const index = {
-  install(app) {
-    app.component(SButton.name, SButton);
-  }
+SButton.install = function(app) {
+  app.component(SButton.name, SButton);
 };
 export {
   SButton,
-  index as default
+  SButton as default
 };
 //# sourceMappingURL=index.esm.js.map

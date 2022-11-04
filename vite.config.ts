@@ -1,7 +1,9 @@
-import { defineConfig, InlineConfig, UserConfig } from "vite";
+import { defineConfig, UserConfig } from "vite";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vue from "@vitejs/plugin-vue";
 import Unocss from "./config/unocss";
+import path from "path";
+import dts from "vite-plugin-dts"; ///向打包后的库里加入声明文件只需要引入vite-plugin-dts
 
 const rollupOptions = {
   external: ["vue", "vue-router"],
@@ -17,7 +19,11 @@ export const config = {
     // 添加jsx插件
     vueJsx({}),
     // 添加unocss插件
-    Unocss()
+    Unocss(),
+    dts({
+      //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
+      tsConfigFilePath: "./tsconfig.json"
+    })
   ],
   // 添加库模式配置
   build: {
@@ -35,6 +41,12 @@ export const config = {
       formats: ["esm", "umd", "iife", "cjs"]
     },
     outDir: "./dist"
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+      components: path.resolve(__dirname, "src/components")
+    }
   }
 };
 export default defineConfig(config as UserConfig);

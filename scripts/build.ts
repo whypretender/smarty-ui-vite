@@ -23,7 +23,7 @@ const buildAll = async () => {
     path.resolve("./README.md"),
     path.resolve(config.build.outDir + "/README.md")
   );
-  const srcDir = path.resolve(__dirname, "../src/");
+  const srcDir = path.resolve(__dirname, "../src/components");
   fs.readdirSync(srcDir)
     .filter((name) => {
       // 只要目录不要文件，且里面包含index.ts
@@ -42,7 +42,6 @@ const buildAll = async () => {
         },
         outDir
       };
-
       Object.assign(config.build, custom);
       await build(defineConfig(config as UserConfig) as InlineConfig);
 
@@ -51,7 +50,7 @@ const buildAll = async () => {
         `{
             "name": "vue3-vite-ui/${name}",
             "main": "index.umd.js",
-            "module": "index.umd.js",
+            "module": "index.umd.js"
           }`,
         `utf-8`
       );
